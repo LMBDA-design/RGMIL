@@ -4,7 +4,6 @@ from scipy import io
 import numpy as np
 from model import MILModel
 from sklearn.model_selection import KFold
-from transformers import DistilBertTokenizer, DistilBertModel
 import torch.optim as optim
 
 DATASETS = [
