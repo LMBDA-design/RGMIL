@@ -1,6 +1,8 @@
 
 # RGMIL
 
+python version : 3.10
+
 Requirements:
 - numpy
 - scikit-learn
@@ -9,6 +11,8 @@ Requirements:
 - scipy
 - PIL
 - visdom
+- pandas
+- pingouin
 
 ## Benchmark Experiments
 
