@@ -62,10 +62,9 @@ optional bag size:
 
 Make sure there are 800GB free disk space for UNBC storage.
 
-Before test on UNBC, put the UNBC original dataset under datasets/UNBC.
+Before test on UNBC, you need to redivide the UNBC dataset with 25 folds, generated under datasets/UNBC.
 
 Run this command to test RGMIL on UNBC:
-
 
 ```python train_UNBC.py --pooling rgp --dataset UNBC```
 
