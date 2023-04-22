@@ -257,7 +257,10 @@ def checkdataset():
 
     viz = visdom.Visdom()
     print(imgs.shape, labels.shape)
-
+    label_counts = np.bincount(labels[:, 0].astype(int))
+    for i, count in enumerate(label_counts):
+        print(f'Label {i}: {count} samples')
+    
     noise = np.random.randn(64, 1, 28, 28)
     win = viz.images(noise, 8)
     for i in range(imgs.shape[0]):
