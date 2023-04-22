@@ -111,7 +111,7 @@ class MILModel(nn.Module):
             setattr(self, 't{}'.format(i), TransMIL(n_classes=2))
             self.tsp.append(getattr(self, 't{}'.format(i)))
 
-        self.output = nn.LogSoftmax(dim=1)  # [ks,t,2]
+        self.output = nn.LogSoftmax(dim=1)  # [ks,2]
 
     def forward(self, x, pooling):
 
