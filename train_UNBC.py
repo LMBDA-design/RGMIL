@@ -107,22 +107,6 @@ def get_loader(dataset, mode, target_number=0):
                 **loader_kwargs)
             return train_loader, test_loader
 
-            # data_transform_train = get_transforms(train=True)
-            # data_transform_test = get_transforms(train=False)
-            #
-            # data_dir = ".\\datasets\\UNBC\\train"
-            #
-            # train_dataset = datasets.ImageFolder(data_dir, data_transform_train)
-            # # sampler = get_sampler(train_dataset)
-            #
-            # data_dir = ".\\datasets\\UNBC\\val"
-            #
-            # test_dataset = datasets.ImageFolder(data_dir, data_transform_test)
-            #
-            # train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=1,  shuffle=True,
-            #                                            num_workers=4)
-            # test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=1, shuffle=False)
-            # return train_loader, test_loader
     else:
         if dataset == "MNIST":
             train_loader = data_utils.DataLoader(datasets.MNIST('../datasets',
