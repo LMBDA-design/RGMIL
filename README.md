@@ -36,6 +36,10 @@ Make sure there are 30GB free disk space for MMNIST storage.
 
 Before experiments, use MMNIST/make_ds.py to produce MMNIST datasets first.
 
+```python make_ds.py```
+
+It may cost several hours to produce MMNIST.
+
 Run following command to test different aggregators on MMNIST of different modes：
 
 ```python main.py --pooling rgp --bagsize 1```
