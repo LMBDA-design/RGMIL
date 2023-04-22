@@ -264,13 +264,6 @@ def checkdataset():
         viz.images(imgs[i], 8, win=win, )
         print(labels[i])
         time.sleep(10)
-    # for i, (imgs, labels) in enumerate(dataloader):
-    #     imgs = imgs[0]
-    #     labels = labels[0]
-    #     print(imgs.shape, labels.shape)
-    #     viz.images(imgs, 8, win=win, )
-    #     print(labels)
-    #     time.sleep(5)
 
 
 def mixup_test(target_num):
@@ -314,18 +307,4 @@ if __name__ == "__main__":
     makedataset()
     mixup_train(4)
     mixup_test(4)
-    # for i in range(1,10):
-    #     modify(i)
-    #     mixup(i)
-    # MnistBagDataset()
-    # adddata(5,0)
-    # checkdataset()
-    # test_loader = data_utils.DataLoader(MnistBagDataset(target_number=5,
-    #                                                     train=False,mode="bag"),
-    #                                     batch_size=1,
-    #                                     shuffle=True,
-    #                                     **loader_kwargs)
-    #
-    # checkdataset()
-    # a = torch.Tensor([5.])
-    # print(int(a))
+
