@@ -36,6 +36,8 @@ Make sure there are 30GB free disk space for MMNIST storage.
 
 Before experiments, use MMNIST/make_ds.py to produce MMNIST datasets first.
 
+You can put MNIST raw dataset under directory "datasets" first.
+
 ```python make_ds.py```
 
 It may cost several hours to produce MMNIST.
