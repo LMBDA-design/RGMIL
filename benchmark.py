@@ -7,11 +7,27 @@ from sklearn.model_selection import KFold
 import torch.optim as optim
 
 DATASETS = [
-            "MUSK2",
-            "MUSK1",
-            "FOX",
-            "TIGER",
-            "ELEPHANT",
+            
+            "alt_atheism",
+            "comp_graphics",
+            "comp_os_ms-windows_misc",
+            "comp_sys_ibm_pc_hardware",
+            "comp_sys_mac_hardware",
+            "comp_windows_x",
+            "misc_forsale",
+            "rec_autos",
+            "rec_motorcycles",
+            "rec_sport_baseball",
+            "rec_sport_hockey",
+            "sci_crypt",
+            "sci_electronics",
+            "sci_med",
+            "sci_religion_christian",
+            "sci_space",
+            "talk_politics_guns",
+            "talk_politics_mideast",
+            "talk_politics_misc",
+            "talk_religion_misc",
     "talk_politics_guns",
     "talk_politics_mideast",
     "talk_politics_misc",
@@ -26,7 +42,12 @@ DATASETS = [
     "web8",
     "web9",
     "messidor",
-    "ucsb_breast"
+    "ucsb_breast"，
+            "MUSK2",
+            "MUSK1",
+            "FOX",
+            "TIGER",
+            "ELEPHANT",
 ]
 
 if __name__ == "__main__":
