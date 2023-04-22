@@ -67,7 +67,7 @@ Run this command to test RGMIL on UNBC:
 
 ```python train_UNBC.py --pooling rgp --dataset UNBC```
 
-It would cost a long time since dataset would be redivided and recreated.
+It would cost a long time since dataset would be redivided and recreated. For all 25-fold cv, you may need more than a week on RTX 4090.
 
 
 
