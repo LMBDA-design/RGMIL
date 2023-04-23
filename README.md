@@ -56,7 +56,7 @@ optional pooling methods:
 - dsp   (dual stream pooling)
 - abp   (attention-based pooling)
 - gab   (gated attention-based pooling)
-- tsp   (pooling from transmil)
+- tsp   (pooling from transmil using TPT module)
 
 
 optional bag size:
