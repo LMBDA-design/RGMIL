@@ -42,7 +42,7 @@ DATASETS = [
     "web8",
     "web9",
     "messidor",
-    "ucsb_breast"，
+    "ucsb_breast",
             "MUSK2",
             "MUSK1",
             "FOX",
