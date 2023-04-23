@@ -30,8 +30,8 @@ class MnistBagDataset(data_utils.Dataset):
         datas = torch.Tensor()
         labels = torch.Tensor()
         if self.train:
-            pathx = f"..\\datasets\\MNIST_{BAG_LENGTH}\\train\\{self.target_number}_x_.npy"
-            pathy = f"..\\datasets\\MNIST_{BAG_LENGTH}\\train\\{self.target_number}_y_.npy"
+            pathx = f"datasets\\MNIST_{BAG_LENGTH}\\train\\{self.target_number}_x_.npy"
+            pathy = f"datasets\\MNIST_{BAG_LENGTH}\\train\\{self.target_number}_y_.npy"
             data = torch.Tensor(np.load(pathx))
             datas = torch.cat([datas, data], dim=0)
             label = torch.Tensor(np.load(pathy))
@@ -39,8 +39,8 @@ class MnistBagDataset(data_utils.Dataset):
             datas = datas[:self.training_bags]
             labels = labels[:self.training_bags]
         elif self.mode == "single":  # for single img tests
-            pathx = f"..\\datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_x.npy"
-            pathy = f"..\\datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_y.npy"
+            pathx = f"datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_x.npy"
+            pathy = f"datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_y.npy"
             data = torch.Tensor(np.load(pathx))
             datas = torch.cat([datas, data], dim=0)
             datas = datas.view(-1, 1, 28, 28)
@@ -50,8 +50,8 @@ class MnistBagDataset(data_utils.Dataset):
             datas = datas[:10000]
             labels = labels[:10000]
         else:  # for bag tests
-            pathx = f"..\\datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_x_.npy"
-            pathy = f"..\\datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_y_.npy"
+            pathx = f"datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_x_.npy"
+            pathy = f"datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_y_.npy"
             data = torch.Tensor(np.load(pathx))
             datas = torch.cat([datas, data], dim=0)
             label = torch.Tensor(np.load(pathy))
@@ -79,15 +79,15 @@ class UNBCBagDataset(data_utils.Dataset):
         datas = torch.Tensor()
         labels = torch.Tensor()
         if self.train:
-            pathx = f"..\\datasets\\MNIST_{BAG_LENGTH}\\train\\{self.target_number}_x_.npy"
-            pathy = f"..\\datasets\\MNIST_{BAG_LENGTH}\\train\\{self.target_number}_y_.npy"
+            pathx = f"datasets\\MNIST_{BAG_LENGTH}\\train\\{self.target_number}_x_.npy"
+            pathy = f"datasets\\MNIST_{BAG_LENGTH}\\train\\{self.target_number}_y_.npy"
             data = torch.Tensor(np.load(pathx))
             datas = torch.cat([datas, data], dim=0)
             label = torch.Tensor(np.load(pathy))
             labels = torch.cat([labels, label], dim=0)
         elif self.mode == "single":  # for single img tests
-            pathx = f"..\\datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_x.npy"
-            pathy = f"..\\datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_y.npy"
+            pathx = f"datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_x.npy"
+            pathy = f"datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_y.npy"
             data = torch.Tensor(np.load(pathx))
             datas = torch.cat([datas, data], dim=0)
             datas = datas.view(-1, 1, 28, 28)
@@ -97,8 +97,8 @@ class UNBCBagDataset(data_utils.Dataset):
             datas = datas[:10000]
             labels = labels[:10000]
         else:  # for bag tests
-            pathx = f"..\\datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_x_.npy"
-            pathy = f"..\\datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_y_.npy"
+            pathx = f"datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_x_.npy"
+            pathy = f"datasets\\MNIST_{BAG_LENGTH}\\test\\{self.target_number}_y_.npy"
             data = torch.Tensor(np.load(pathx))
             datas = torch.cat([datas, data], dim=0)
             label = torch.Tensor(np.load(pathy))
@@ -225,8 +225,8 @@ def makedataset(dataset="MNIST", max_num=3, num_bag=10000, bag_length=64):
             datas_1 = datas[label_idx]
             labels_1 = labels[label_idx]
             print("train ", datas_1.shape, labels_1.shape)
-            np.save(f"..\\datasets\\MNIST_{bag_length}\\train\\{j}_x.npy", datas_1)
-            np.save(f"..\\datasets\\MNIST_{bag_length}\\train\\{j}_y.npy", labels_1)
+            np.save(f"datasets\\MNIST_{bag_length}\\train\\{j}_x.npy", datas_1)
+            np.save(f"datasets\\MNIST_{bag_length}\\train\\{j}_y.npy", labels_1)
 
             datas = torch.Tensor()
             labels = torch.Tensor()
@@ -247,13 +247,13 @@ def makedataset(dataset="MNIST", max_num=3, num_bag=10000, bag_length=64):
             datas_1 = datas[label_idx]
             labels_1 = labels[label_idx]
             print("test ", datas_1.shape, labels_1.shape)
-            np.save(f"..\\datasets\\MNIST_{bag_length}\\test\\{j}_x.npy", datas_1)
-            np.save(f"..\\datasets\\MNIST_{bag_length}\\test\\{j}_y.npy", labels_1)
+            np.save(f"datasets\\MNIST_{bag_length}\\test\\{j}_x.npy", datas_1)
+            np.save(f"datasets\\MNIST_{bag_length}\\test\\{j}_y.npy", labels_1)
 
 
 def checkdataset():
-    imgs = np.load(f"..\\datasets\\MNIST_64\\test\\3_x_.npy")
-    labels = np.load(f"..\\datasets\\MNIST_64\\test\\3_y_.npy")
+    imgs = np.load(f"datasets\\MNIST_64\\test\\3_x_.npy")
+    labels = np.load(f"datasets\\MNIST_64\\test\\3_y_.npy")
 
     viz = visdom.Visdom()
     print(imgs.shape, labels.shape)
@@ -273,8 +273,8 @@ def mixup_test(target_num):
     datas = torch.Tensor()
     labels = torch.Tensor()
     for i in range(target_num):
-        img = torch.Tensor(np.load(f"..\\datasets\\MNIST_64\\test\\{i}_x.npy"))
-        label = torch.Tensor(np.load(f"..\\datasets\\MNIST_64\\test\\{i}_y.npy"))
+        img = torch.Tensor(np.load(f"datasets\\MNIST_64\\test\\{i}_x.npy"))
+        label = torch.Tensor(np.load(f"datasets\\MNIST_64\\test\\{i}_y.npy"))
         datas = torch.cat([datas, img], dim=0)
         labels = torch.cat([labels, label], dim=0)
 
@@ -283,16 +283,16 @@ def mixup_test(target_num):
         datas = datas[idx, :, :, :]
         labels = labels[idx]
 
-    np.save(f"..\\datasets\\MNIST_64\\test\\{target_num}_x_.npy", datas)
-    np.save(f"..\\datasets\\MNIST_64\\test\\{target_num}_y_.npy", labels)
+    np.save(f"datasets\\MNIST_64\\test\\{target_num}_x_.npy", datas)
+    np.save(f"datasets\\MNIST_64\\test\\{target_num}_y_.npy", labels)
 
 
 def mixup_train(target_num):
     datas = torch.Tensor()
     labels = torch.Tensor()
     for i in range(target_num):
-        img = torch.Tensor(np.load(f"..\\datasets\\MNIST_64\\train\\{i}_x.npy"))
-        label = torch.Tensor(np.load(f"..\\datasets\\MNIST_64\\train\\{i}_y.npy"))
+        img = torch.Tensor(np.load(f"datasets\\MNIST_64\\train\\{i}_x.npy"))
+        label = torch.Tensor(np.load(f"datasets\\MNIST_64\\train\\{i}_y.npy"))
         datas = torch.cat([datas, img], dim=0)
         labels = torch.cat([labels, label], dim=0)
 
@@ -301,8 +301,8 @@ def mixup_train(target_num):
         datas = datas[idx, :, :, :]
         labels = labels[idx]
 
-    np.save(f"..\\datasets\\MNIST_64\\train\\{target_num}_x_.npy", datas)
-    np.save(f"..\\datasets\\MNIST_64\\train\\{target_num}_y_.npy", labels)
+    np.save(f"datasets\\MNIST_64\\train\\{target_num}_x_.npy", datas)
+    np.save(f"datasets\\MNIST_64\\train\\{target_num}_y_.npy", labels)
 
 
 if __name__ == "__main__":
