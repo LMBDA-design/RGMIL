@@ -272,7 +272,7 @@ def checkdataset():
 def mixup_test(target_num):
     datas = torch.Tensor()
     labels = torch.Tensor()
-    for i in range(target_num):
+    for i in range(target_num+1):
         img = torch.Tensor(np.load(f"datasets\\MNIST_64\\test\\{i}_x.npy"))
         label = torch.Tensor(np.load(f"datasets\\MNIST_64\\test\\{i}_y.npy"))
         datas = torch.cat([datas, img], dim=0)
@@ -290,7 +290,7 @@ def mixup_test(target_num):
 def mixup_train(target_num):
     datas = torch.Tensor()
     labels = torch.Tensor()
-    for i in range(target_num):
+    for i in range(target_num+1):
         img = torch.Tensor(np.load(f"datasets\\MNIST_64\\train\\{i}_x.npy"))
         label = torch.Tensor(np.load(f"datasets\\MNIST_64\\train\\{i}_y.npy"))
         datas = torch.cat([datas, img], dim=0)
@@ -308,6 +308,6 @@ def mixup_train(target_num):
 if __name__ == "__main__":
     os.chdir("..")
     makedataset()
-    mixup_train(4)
-    mixup_test(4)
+    mixup_train(3)
+    mixup_test(3)
 
