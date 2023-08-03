@@ -59,7 +59,7 @@ class MILModel(nn.Module):
         self.linears = [nn.Parameter(data=torch.FloatTensor(512, 2), requires_grad=False).to(device) for i in
                         range(self.ks)]
         for p in self.linears:
-            nn.init.kaiming_uniform_(p)
+            nn.init.kaiming_normal_(p)
 
         # used for abp
         self.attentions = []
