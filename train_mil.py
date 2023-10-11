@@ -35,7 +35,6 @@ DATASETS = [
             "web7",
             "web8",
             "web9",
-            "messidor",
             "ucsb_breast"
             ]
 
@@ -72,7 +71,7 @@ for dataset in DATASETS:
     else:
         dim_orig = 201
 
-    datapath = f'..\\datasets\\Benchmark\\{dataset}.mat'
+    datapath = f'datasets\\Benchmark\\{dataset}.mat'
     features_struct = scipy.io.loadmat(datapath)
     data = features_struct['data']  # [92 recs,2 (0 for a ndarray(baglength,167) of conforms,1 for label)]
     x = data[:, 0]
