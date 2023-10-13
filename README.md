@@ -1,5 +1,5 @@
 
-# RGMIL:Guide Your Multiple-Instance Learning Model with Regressor
+# ReGMI
 
 python version : 3.10
 
