@@ -1,5 +1,5 @@
 
-# ReGMI
+# RGMIL
 
 python version : 3.10
 
