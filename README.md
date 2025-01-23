@@ -33,9 +33,13 @@ You can also modify the **DATASETS** array in train_mil.py to perform specific e
 
 ## UNBC Experiments
 Make sure there are 800GB free disk space for UNBC storage.
+
 Before test on UNBC, put the UNBC original dataset under datasets/UNBC.
+
 Run this command to test RGMIL on UNBC:
+
 ```python train_UNBC.py --pooling rgp --dataset UNBC```
+
 It would cost a long time since dataset would be divided and recreated.
 
 
