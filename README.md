@@ -1,5 +1,5 @@
 
-# RGMIL
+# RGMIL: Guide Your Multiple-Instance Learning Model with Regressor
 
 python version : 3.10
 
@@ -55,7 +55,7 @@ Run following command to test different aggregators on MMNIST of different modes
 
 ```python main.py --pooling rgp --bagsize 64```
 
-When bagsize set to 1, it corresponds to fully supervised.
+When bagsize set to 1, it corresponds to fully supervised. Choose your options as supported.
 
 
 
