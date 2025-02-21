@@ -56,6 +56,8 @@ Run following command to test different aggregators on MMNIST of different modes
 ```python main.py --pooling rgp --bagsize 1```
 
 
+
+
 ## UNBC Experiments
 Make sure there are 800GB free disk space for UNBC storage.
 
