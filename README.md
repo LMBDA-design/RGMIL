@@ -40,9 +40,7 @@ According to [TRMIL](https://arxiv.org/abs/2307.14025), the +1 feature dimension
 ![image](https://github.com/user-attachments/assets/44f6a61b-bd1c-43a5-803e-7549b6360fe8)
 
 
-In comparative experiments, please pay additional attention to the feature dimension (it is more recommended to re-implement **ALL** methods using the unified version of the dataset with consistent dimensions, since the additional dimension may bring significant improvements if your model could find the relation here). 
-
-As suggested by an example of detailed explanation of datasets:[FOX](https://archive.ics.uci.edu/dataset/74/musk+version+1), the molecule_name and conformation_name attributes should not be used to predict the class. While the extra instance label dimension is open to pick if you want to achieve high performance in the data or in special cases.
+As suggested by an example of detailed explanation of datasets:[FOX](https://archive.ics.uci.edu/dataset/74/musk+version+1), the molecule_name and conformation_name attributes should not be used to predict the class. While the extra instance label dimension is open to pick if you want to achieve high performance in the data or in special cases. In comparative experiments, please pay additional attention to the feature dimension (it is more recommended to re-implement **ALL** methods using the unified version of the dataset with consistent dimensions, since the additional dimension may bring significant improvements if your model could find the relation here). 
 
 ## MNIST Experiments
 
