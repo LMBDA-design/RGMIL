@@ -35,14 +35,14 @@ You can also modify the **DATASETS** array in train_mil.py to perform specific e
 In the bag-level evaluation, our training and evaluation code comes from [DSMIL](https://github.com/binli123/dsmil-wsi), and the benchmark datasets are downloaded from online resources. This is the version we used in paper and presented publicly. However, we recently noticed that the version of the dataset we used during train (as provided in the `datasets/Benchmark` directory) may contains an extra feature dimension compared to the original version in previous methods (e.g., FOX dataset with 230+1 dimensions).  This specific extra dimension literally contains the instance label. This is what we did not notice before. You may get similar performance if you use our full scheme here, which you will find a huge improvement than previous methods. 
 
 
-According to [TRMIL](https://arxiv.org/abs/2307.14025), the +1 feature dimension(instance label) and model capacity may both contribute to the huge improvements during test. While it may approach **SUPER HIGH** performance in such full scheme, if you use a version of your data with lower dimension, performance of RGMIL may still remain at sota level, but it could decrease! A reproduced result by [TRMIL](https://arxiv.org/abs/2307.14025) is as follows:
+According to [TRMIL](https://arxiv.org/abs/2307.14025), the +1 feature dimension(instance label) and model capacity may both contribute to the huge improvements during test. While it may approach **SUPER HIGH** performance in such full scheme, if you use a version of your data with lower dimension, performance of RGMIL may still remain at sota level, but it could decrease! A reproduced result of lower dimension by [TRMIL](https://arxiv.org/abs/2307.14025) is as follows:
 
 ![image](https://github.com/user-attachments/assets/44f6a61b-bd1c-43a5-803e-7549b6360fe8)
 
 
 In comparative experiments, please pay additional attention to the feature dimensions (it is more recommended to re-implement **ALL** methods using the unified version of the dataset with consistent dimensions, since the additional dimension may bring significant improvements if your model could find the relation here). 
 
-An example of detailed explanation of datasets:[FOX](https://archive.ics.uci.edu/dataset/74/musk+version+1)
+As suggested by an example of detailed explanation of datasets:[FOX](https://archive.ics.uci.edu/dataset/74/musk+version+1), the molecule_name and conformation_name attributes should not be used to predict the class. While the extra instance label dimension is open to pick if you want to achieve high performance in the data.
 
 ## MNIST Experiments
 
