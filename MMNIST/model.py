@@ -23,15 +23,6 @@ class Backbone(nn.Module):
                 nn.AdaptiveAvgPool2d((4, 4))
                 # [t,32,4,4]
             )
-        if dataset == "CIFAR10" or dataset == "UNBC":
-            if type == "res18":
-                self.stem = models.resnet18(pretrained=True)
-                self.stem.fc = nn.Identity()
-            if type == "swin":
-                self.stem = timm.models.swin_base_patch4_window7_224(pretrained=True)
-                self.stem.head = nn.Sequential(
-                    nn.Linear(1024, out_ch * 16),
-                )
 
     def forward(self, x):
         x = self.stem(x)
@@ -48,10 +39,6 @@ class MILModel(nn.Module):
         self.dataset = dataset
         if dataset == "MNIST":
             self.ks = 3
-        elif dataset == "CIFAR10":
-            self.ks = 9
-        elif dataset == "CIFAR100":
-            self.ks = 99
 
         # regressors
         self.linearsf = []
@@ -116,8 +103,6 @@ class MILModel(nn.Module):
             setattr(self, 't{}'.format(i), TransMIL(n_classes=2))
             self.tsp.append(getattr(self, 't{}'.format(i)))
 
-        # used for psa
-
 
         self.output = nn.LogSoftmax(dim=1)  # [ks,2]
 
@@ -181,38 +166,6 @@ class MILModel(nn.Module):
 
             alpha = nn.functional.softmax(A, dim=1)  # normalize attention scores, A in shape [ks,t]
             F = torch.mm(alpha, V)  # compute bag representation, B in shape [ks,o]
-
-        if pooling == "psa":
-            with torch.no_grad():
-                pred = torch.softmax(torch.mm(fs, self.fbank), dim=1)  # [t,ks]
-                predicted_labels = torch.argmax(pred, dim=1)  # Find the predicted class for each sample
-                pred_one_hot = nn.functional.one_hot(predicted_labels, num_classes=pred.shape[1]).float()
-
-            alpha = self.ps_attention(pred)  # [t,1]
-            alpha1 = self.ps_attention(pred_one_hot)  # [t,1]
-            alpha = torch.softmax(alpha.T, dim=1)  # [1,t]
-            alpha1 = torch.softmax(alpha1.T, dim=1)  # [1,t]
-
-            alpha = (alpha + alpha1) / 2
-
-            F = torch.mm(alpha, fs)  # [1,o]
-
-            selected_samples = (predicted_labels == y)  # Compare with the target class y
-
-            if any(selected_samples):
-                critical_fs = fs[selected_samples]  # [n,o]
-                criticalF = torch.mean(critical_fs, dim=0, keepdim=True)
-            else:
-                criticalF = F
-
-            if y >= 0:
-                newf = nn.functional.normalize((0.999 * self.fbank[:, y]) + (0.001 * criticalF.t()), dim=0)
-                self.fbank[:, y] = newf
-
-            if torch.isnan(self.fbank).any():
-                print("Tensor Fbank contains NaN values")
-                sys.exit()
-            Y_logits = torch.matmul(F, self.linear)  # [1,ks]
 
         # t-p-t module
         if pooling == "tsp":
