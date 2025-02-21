@@ -37,6 +37,15 @@ In the bag-level benchmark evaluation, our training and evaluation code comes fr
 
 In comparative experiments, please pay additional attention to the feature dimensions (it is recommended to re-implement **ALL** methods using the unified version of the dataset with consistent dimensions if you use the datasets we collected here). You may get similar performance if you use our dataset collected here. While if you use a version of your data with lower dimension, the model's performance may still remain at SOTA level, but it could decrease!
 
+## MNIST Experiments
+
+Before experiments, use MMNIST/make_ds.py to produce MMNIST datasets first.
+
+You can put MNIST raw dataset under directory "datasets" first.
+
+```python make_ds.py```
+
+It may cost several hours to produce MMNIST.
 
 
 
