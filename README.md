@@ -53,8 +53,9 @@ Run following command to inspect the accuracy float:
 
 Run following command to test different aggregators on MMNIST of different modes：
 
-```python main.py --pooling rgp --bagsize 1```
+```python main.py --pooling rgp --bagsize 64```
 
+When bagsize set to 1, it corresponds to fully supervised.
 
 
 
