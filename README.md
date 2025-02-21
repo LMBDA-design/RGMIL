@@ -1,5 +1,5 @@
 
-# RGMIL: Guide Your Multiple-Instance Learning Model with Regressor
+# [RGMIL: Guide Your Multiple-Instance Learning Model with Regressor](https://proceedings.neurips.cc/paper_files/paper/2023/hash/6feb9b30798abcfae937760d183605e1-Abstract-Conference.html),
 
 python version : 3.10
 
