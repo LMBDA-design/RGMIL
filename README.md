@@ -9,7 +9,7 @@ Requirements:
 - torch
 - torchvision
 - scipy
-- PIL
+- PIL 
 - visdom
 - pandas
 - pingouin
