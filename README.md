@@ -40,7 +40,7 @@ According to [TRMIL](https://arxiv.org/abs/2307.14025), the +1 feature dimension
 ![image](https://github.com/user-attachments/assets/44f6a61b-bd1c-43a5-803e-7549b6360fe8)
 
 
-In comparative experiments, please pay additional attention to the feature dimensions (it is recommended to re-implement **ALL** methods using the unified version of the dataset with consistent dimensions, since the additional dimension may bring significant improvements if your model could find the relation here). 
+In comparative experiments, please pay additional attention to the feature dimensions (it is more recommended to re-implement **ALL** methods using the unified version of the dataset with consistent dimensions, since the additional dimension may bring significant improvements if your model could find the relation here). 
 
 An example of detailed explanation of datasets:[FOX](https://archive.ics.uci.edu/dataset/74/musk+version+1)
 
