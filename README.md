@@ -35,7 +35,7 @@ You can also modify the **DATASETS** array in train_mil.py to perform specific e
 In the bag-level benchmark evaluation, our training and evaluation code comes from [DSMIL](https://github.com/binli123/dsmil-wsi), and the benchmark datasets are downloaded from online resources. This is the version we presented publicly. However, we recently noticed that the version of the dataset we downloaded (as provided in the `datasets/Benchmark` directory) may have an extra feature dimension compared to the original version (e.g., FOX dataset with 230+1 dimensions). We are unsure whether this additional feature causes information leakage.
 
 
-In comparative experiments, please pay additional attention to the feature dimensions (it is recommended to re-implement **ALL** methods using the unified version of the dataset with consistent dimensions if you use the datasets we collected here). You may get similar performance if you use our dataset collected here. While if you use a version of your data with lower dimension, the model's performance may still remain at SOTA level, but it could decrease!
+ You may get similar performance if you use our dataset collected here. While if you use a version of your data with lower dimension, the model's performance may still remain at SOTA level, but it could decrease! In comparative experiments, please pay additional attention to the feature dimensions (it is recommended to re-implement **ALL** methods using the unified version of the dataset with consistent dimensions if you use the datasets we collected here).
 
 ## MNIST Experiments
 
