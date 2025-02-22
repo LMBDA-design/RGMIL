@@ -39,7 +39,7 @@ According to [TRMIL](https://arxiv.org/abs/2307.14025), the +1 feature dimension
 
 ![image](https://github.com/user-attachments/assets/44f6a61b-bd1c-43a5-803e-7549b6360fe8)
 
-In the research, we also experimented with other bag-level tasks, such as SIVAL, and found that the performance is comparable to the sota models, which do not involve feature inconsistency. The conclusion of the research asserts that RGMIL performs better or comparable to the current mainstream sota models on bag level. We could still verify the general conclusion through the remaining datasets and the replication results. 
+In the research, we also experimented with other bag-level tasks, such as SIVAL, and found that the performance is comparable to the sota models, which do not involve feature inconsistency. The conclusion of the research asserts that RGMIL performs better or comparable to the current mainstream sota models on bag level. The general conclusion could still be verified through the remaining datasets and the replication results. 
  
 ## MNIST Experiments
 
