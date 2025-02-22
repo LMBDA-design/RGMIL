@@ -23,12 +23,6 @@ Run following command to test RGP on these datasets：
 
 You can also modify the **DATASETS** array in benchmark.py to perform specific experiments on different benchmark datasets.
 
-Run following command to test DSMIL on these datasets for comparison：
-
-```python train_mil.py```
-
-You can also modify the **DATASETS** array in train_mil.py to perform specific experiments on different benchmark datasets.
-
 
 **UPDATE**
 
