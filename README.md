@@ -24,7 +24,7 @@ Run following command to test RGP on these datasets：
 You can also modify the **DATASETS** array in benchmark.py to perform specific experiments on different benchmark datasets.
 
 
-**UPDATE**
+**UPDATED**
 
 In the bag-level evaluation, our training and evaluation code and the benchmark datasets are downloaded from online resources. The presented version is we used in paper. However, we recently noticed that the data input we used during train (as provided in the `datasets/Benchmark` directory) contain an extra feature dimension (e.g., FOX dataset with `x_train`=231 dimensions = 230 +1(instance label), which is in the raw data)).  This specific extra dimension literally contains the instance label(not bag label). While the instance label dimension may be open to pick to check some more explicit ability, it is more recommended to re-implement **ALL** methods using the unified version of the data with consistent dimensions, since the additional dimension may bring significant improvements if your model could learn the relation between instance&bag here. **So Note: Although RGMIL achieved SUPER HIGH performance on this data, such huge gap on above bag-level tasks is NOT actually fair to reflect the essential model capability on bag level when stressing comparison with other models.** 
 
