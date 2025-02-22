@@ -54,7 +54,7 @@ if __name__ == "__main__":
         datapath = f'datasets\\Benchmark\\{DATASET}.mat'
         features_struct = scipy.io.loadmat(datapath)
         data = features_struct['data']
-        Make sure that the data shape of x is what you exactly want! Pay additional attention to the dimension of x!
+        Make sure that the data shape of x is what you exactly want, and you have read the README.md! Pay additional attention to the dimension of x.
         x = data[:, 0]
         y = data[:, 1]
 
