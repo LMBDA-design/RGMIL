@@ -34,7 +34,7 @@ According to [TRMIL](https://arxiv.org/abs/2307.14025), the +1 feature dimension
 
 ![image](https://github.com/user-attachments/assets/44f6a61b-bd1c-43a5-803e-7549b6360fe8)
 
-This replication result reflects similar model capacity close to the other experiments we presented and could be considered as a reference. But still, incorporating the exploration of the relationship between instance labels and bag might also be a option.
+This replication result reflects similar model capacity close to the other experiments we presented and could be considered as a reference. But still, incorporating the exploration of the relationship between instance labels and bag might also be an option in some cases.
 
 
  
