@@ -30,7 +30,7 @@ In the bag-level evaluation, our training and evaluation code and the benchmark 
 
 **REPLICATED UNIFIED VERSION WITHOUT INSTANCE LABEL:**
 
-You may get **SUPER HIGH** performance if you use our full scheme here, which you will find a huge improvement than previous. According to [TRMIL](https://arxiv.org/abs/2307.14025), the +1 feature dimension(instance label) and model capacity of RGMIL may both contribute to the huge improvements.  If you use a version of your data with consistent lower dimension, performance of RGMIL may still remain at sota level, but it could decrease! A replicated result of lower dimension by [TRMIL](https://arxiv.org/abs/2307.14025) is as follows:
+According to [TRMIL](https://arxiv.org/abs/2307.14025), the +1 feature dimension(instance label) and model capacity of RGMIL may both contribute to the huge improvements.  If you use a version of your data with consistent lower dimension, performance of RGMIL may still remain at sota level, but it could decrease! A replicated result of lower dimension by [TRMIL](https://arxiv.org/abs/2307.14025) is as follows:
 
 ![image](https://github.com/user-attachments/assets/44f6a61b-bd1c-43a5-803e-7549b6360fe8)
 
