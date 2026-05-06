@@ -36,7 +36,7 @@ According to [TRMIL](https://arxiv.org/abs/2307.14025), the +1 feature dimension
 
 This replication result reflects similar model capacity close to the other experiments we presented and could be considered as a reference. But still, incorporating the exploration of the relationship between instance labels and bag might also be an option in some cases.
 
-
+The version of manual benchmark partition X we download contains instance labels. To ensure standardized use and avoid unintended misuse, choose to use the benchmark dataset that has been processed according to the standard protocol.
  
 ## MNIST Experiments
 
